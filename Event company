@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Events Kenya</title>
+  <style>
+    :root {
+      --electric-blue: #00d4ff;
+      --vibrant-purple: #b200ff;
+      --neon-pink: #ff0077;
+      --golden-yellow: #ffd700;
+      --bright-orange: #ff6600;
+      --dark-bg: #111;
+      --light-text: #f4f4f4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; color: #333; background: #fff; line-height: 1.6; }
+    nav { background: var(--dark-bg); padding: 1em; position: sticky; top: 0; z-index: 1000; }
+    nav ul { display: flex; list-style: none; justify-content: center; }
+    nav li { margin: 0 15px; }
+    nav a { color: var(--electric-blue); text-decoration: none; font-weight: bold; }
+    nav a:hover { color: var(--neon-pink); }
+
+    /* Hero Carousel */
+    .hero { position: relative; width: 100%; height: 60vh; overflow: hidden; }
+    .slides { display: flex; width: 300%; height: 100%; animation: slide 15s infinite; }
+    .slide {
+      width: 100%; flex-shrink: 0;
+      background-size: cover; background-position: center;
+      position: relative;
+    }
+    .slide .caption {
+      position: absolute; bottom: 20%; left: 5%;
+      background: rgba(0,0,0,0.5); color: #fff;
+      padding: 1em; border-radius: .5em;
+      max-width: 90%;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(0); }
+      36% { transform: translateX(-100%); }
+      66% { transform: translateX(-100%); }
+      69% { transform: translateX(-200%); }
+      99% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    .container { padding: 2em; max-width: 1200px; margin: auto; }
+    h2 { color: var(--electric-blue); margin-bottom: 1em; text-align: center; }
+
+    .services, .gallery, .testimonials, .blog, .about { margin-bottom: 3em; }
+    .services .item, .gallery .item, .blog .entry { display: inline-block; width: calc(50% - 20px); margin: 10px; vertical-align: top; }
+    .services .item h3, .gallery .item h4, .blog .entry h4 { color: var(--vibrant-purple); }
+
+    .gallery .item { position: relative; overflow: hidden; height: 200px; }
+    .gallery img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .gallery .item:hover img { transform: scale(1.1); }
+    .gallery .caption {
+      position: absolute; bottom: 0; left: 0;
+      background: rgba(0,0,0,0.6); color: #fff;
+      width: 100%; padding: .5em;
+      text-align: center;
+    }
+
+    .testimonials blockquote {
+      border-left: 5px solid var(--neon-pink);
+      margin: 1em 0; padding-left: 1em;
+      font-style: italic;
+    }
+    .contact form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1em;
+      max-width: 600px;
+      margin: auto;
+    }
+    .contact input, .contact textarea {
+      padding: .75em; border: 1px solid #ccc; border-radius: .4em;
+    }
+    .contact button {
+      padding: .75em; background: var(--bright-orange);
+      border: none; color: #fff; font-size: 1em;
+      cursor: pointer; border-radius: .4em;
+    }
+    .contact button:hover { background: var(--neon-pink); }
+
+    footer {
+      text-align: center; background: var(--dark-bg);
+      color: var(--light-text); padding: 2em 1em;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+<section id="hero" class="hero">
+  <div class="slides">
+    <div class="slide" style="background-image:url('image-sound-system.jpg')">
+      <div class="caption"><h2>World-class Sound Systems</h2><p>Immersive audio for unforgettable moments.</p></div>
+    </div>
+    <div class="slide" style="background-image:url('image-lighting-setup.jpg')">
+      <div class="caption"><h2>Vibrant Lighting Setups</h2><p>Lighting that creates the perfect atmosphere.</p></div>
+    </div>
+    <div class="slide" style="background-image:url('image-dj-service.jpg')">
+      <div class="caption"><h2>Professional DJ Services</h2><p>Setting the vibe with top Kenyan DJs.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="item"><h3>Weddings</h3><p>Elegant and unforgettable wedding planning tailored to your love story.</p></div>
+    <div class="item"><h3>Corporate Events</h3><p>Professional and seamless execution for all your business functions.</p></div>
+    <div class="item"><h3>Parties & Celebrations</h3><p>From birthdays to baby showers — we bring the joy to your day.</p></div>
+    <div class="item"><h3>Event Branding</h3><p>Stand out with custom décor, signage, and branded materials.</p></div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="item"><img src="wedding-nairobi.jpg" alt="Kenya wedding in Nairobi grassland"><div class="caption">Graceful Nairobi wedding</div></div>
+    <div class="item"><img src="corporate-event.jpeg" alt="Corporate event"><div class="caption">Corporate success in action</div></div>
+    <div class="item"><img src="concert-party.jpg" alt="Concert party"><div class="caption">Live concert celebration</div></div>
+    <div class="item"><img src="branded-event.jpg" alt="Branded event décor"><div class="caption">Branded décor magic</div></div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2>Testimonials</h2>
+    <blockquote>"Royal Events made our wedding unforgettable! The attention to detail was amazing."<br>– Grace &amp; David</blockquote>
+    <blockquote>"Truly professional team. Our corporate gala was a major success thanks to them."<br>– KenTech Ltd.</blockquote>
+  </section>
+
+  <section id="blog" class="blog">
+    <h2>Our Blog</h2>
+    <div class="entry">
+      <h4>Event Planning Tips</h4>
+      <p><strong>Top 5 Event Planning Tips</strong><br>Discover essential tips to make your next event a success.</p>
+    </div>
+    <div class="entry">
+      <h4>Trends in Decor</h4>
+      <p><strong>Trends in Event Decor 2025</strong><br>Explore this year's hottest event styling and decor ideas.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="#">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p style="text-align:center; margin-top:1em;">
+      📞 Call us: +254 797 859 232 <br>
+      ✉️ Email: royaleventscompany.co.ke@gmail.com
+    </p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <h3>Our Mission</h3>
+    <p>To provide exceptional event planning and management services that exceed our clients’ expectations, turning their visions into memorable experiences.</p>
+    <h3>Our Vision</h3>
+    <p>To be the leading event management company in Kenya and beyond, renowned for creativity, professionalism, and customer satisfaction.</p>
+  </section>
+
+</div>
+
+<footer>
+  © 2025 Royal Events Kenya. All Rights Reserved.
+</footer>
+
+</body>
+</html>
